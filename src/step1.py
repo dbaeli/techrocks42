@@ -13,7 +13,7 @@ html_doc = """
     </body>
 </html>
 """
-soup = BeautifulSoup(html_doc)
+soup = BeautifulSoup(html_doc,"html.parser")
     
 for p in soup.find_all('p'):
     print( p )
