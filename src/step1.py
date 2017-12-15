@@ -3,6 +3,8 @@
 from bs4 import BeautifulSoup
 import requests
 import os.path
+import csv
+import codecs
 
 def scrap_search( company, city ):
 
@@ -20,6 +22,8 @@ def scrap_search( company, city ):
     return response.text
 
 def load_company( company, city ):
+
+    print( "Loading company ["+company+"] at ["+city+"]" )
     # Look if data is in the cache
     filename = "../cache/%s-%s" % ( company, city )
     if not os.path.isfile(filename) :
@@ -38,3 +42,17 @@ def load_company( company, city ):
 load_company( "AVISIA", "PARIS" )
 load_company( "GROUPE CIMES", "PUTEAUX" )
 load_company( "communaute coeur de chartreuse", "entre deux guiers" )
+
+with codecs.open('../test-data/10000.csv', 'r', 'latin1') as siren:
+    siren_reader = csv.reader(siren, delimiter=';', quotechar='"')
+    for row in siren_reader:
+        siren = row[0]
+        name = row[2]
+        city = row[28]
+        if row[47]=='NN':
+            row[47] = '0' 
+        emp_count = int(row[47])
+        if emp_count>10:
+ #           print( name+" "+city+" ("+str(emp_count)+")" )
+            load_company( name, city )
+
