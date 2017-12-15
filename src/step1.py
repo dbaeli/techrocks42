@@ -1,4 +1,3 @@
 #!/usr/local/bin/python3
 
-print( "Hello, Tech Rocks!" )
-
+from bs4 import BeautifulSoup
