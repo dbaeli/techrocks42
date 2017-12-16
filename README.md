@@ -20,9 +20,10 @@ Pas d'utilisation de Google Places (car pas le droit d'utiliser le résultat)
 
 Phase 2:
 => Récupération de la "technologie web" utilisée dans le site web de l'entreprise
-=> Utilisation de wappanalyze (très lent)
+=> Utilisation de wappanalyzer (très lent)
 => Split de 100 processus en parallèle (modulo100 du sirene) pour récupérer toutes les informations
+=> Récupération de la technologie du serveur web (mais d'autres sont disponibles)
 
 Base de donnée: fichier csv avec en clef le siren, url, technologie en résultat (enfin j'espère).
 
-Merci Fred !
+Merci Fred ! 108 lignes de code.
