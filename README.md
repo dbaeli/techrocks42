@@ -12,11 +12,15 @@ Utilisation de duckduckgo => renderer html
 
 Parsing via beautifulsoup4 (python)
 Récupération de toutes les réponses contenant des url, puis filtre sur les url sans sous chemin (domaine seul = exlcusion directe de tous les sites répertoriant les entreprises)
-=> Bonne rapidité de récupération (pas besoin de scaling)
+=> Bonne rapidité de récupération (pas besoin de scaling :-) sinon on utiliserait AWS Cli pour lancer différentes AMI amazon en parallèle)
+
+=> Résultat dans 10000_Scrapped.md
 
 Phase 2:
-=> Récupération de la technologie utilisée dans le site web de l'entreprise
+=> Récupération de la "technologie web" utilisée dans le site web de l'entreprise
 => Utilisation de wappanalyze (très lent)
 => Split de 100 processus en parallèle (modulo100 du sirene) pour récupérer toutes les informations
 
-Base de donnée: fichier csv avec en clef le siren
+Base de donnée: fichier csv avec en clef le siren, url, technologie en résultat (enfin j'espère).
+
+Merci Fred !
