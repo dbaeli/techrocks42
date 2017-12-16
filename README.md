@@ -7,12 +7,14 @@ Etape 1: récupérer les url des sites web de chacune des entreprises
 * Ne prendre que les entreprises de plus de 5 employés
 * Recherche de la ville plus nom de l'entreprise
 
-Utilisation de google comme moteur de recherche pas satisfaisant : rate limited
 Utilisation de duckduckgo => renderer html
+Utilisation de google comme moteur de recherche pas satisfaisant : rate limited
 
 Parsing via beautifulsoup4 (python)
 Récupération de toutes les réponses contenant des url, puis filtre sur les url sans sous chemin (domaine seul = exlcusion directe de tous les sites répertoriant les entreprises)
 => Bonne rapidité de récupération (pas besoin de scaling :-) sinon on utiliserait AWS Cli pour lancer différentes AMI amazon en parallèle)
+
+Pas d'utilisation de Google Places (car pas le droit d'utiliser le résultat)
 
 => Résultat dans 10000_Scrapped.md
 
