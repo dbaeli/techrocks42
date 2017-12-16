@@ -10,7 +10,7 @@ const options = {
   userAgent: 'Wappalyzer',
 };
 
-const wappalyzer = new Wappalyzer('https://www.wappalyzer.com', options);
+const wappalyzer = new Wappalyzer(process.argv[2], options);
 
 wappalyzer.analyze()
   .then(json => {
