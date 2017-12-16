@@ -1,0 +1,24 @@
+{
+  "name": "techrocks",
+  "version": "1.0.0",
+  "description": "virtualenv -p python3",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "wappalyzer": "^5.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbaeli/techrocks42.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbaeli/techrocks42/issues"
+  },
+  "homepage": "https://github.com/dbaeli/techrocks42#readme"
+}
